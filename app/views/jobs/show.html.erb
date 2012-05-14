@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @job.name %>
+</p>
+
+<p>
+  <b>Salary min:</b>
+  <%= @job.salary_min %>
+</p>
+
+<p>
+  <b>Salary max:</b>
+  <%= @job.salary_max %>
+</p>
+
+<p>
+  <b>Finished at:</b>
+  <%= @job.finished_at %>
+</p>
+
+<p>
+  <b>Company:</b>
+  <%= @job.company_id %>
+</p>
+
+<p>
+  <b>Position:</b>
+  <%= @job.position_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_job_path(@job) %> |
+<%= link_to 'Back', jobs_path %>
