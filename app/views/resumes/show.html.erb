@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @resume.name %>
+</p>
+
+<p>
+  <b>Is public:</b>
+  <%= @resume.is_public %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%= @resume.user_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_resume_path(@resume) %> |
+<%= link_to 'Back', resumes_path %>

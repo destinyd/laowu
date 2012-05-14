@@ -1,0 +1,45 @@
+<%= form_for(@audition) do |f| %>
+  <% if @audition.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@audition.errors.count, "error") %> prohibited this audition from being saved:</h2>
+
+      <ul>
+      <% @audition.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :at %><br />
+    <%= f.datetime_select :at %>
+  </div>
+  <div class="field">
+    <%= f.label :user_id %><br />
+    <%= f.number_field :user_id %>
+  </div>
+  <div class="field">
+    <%= f.label :company_id %><br />
+    <%= f.number_field :company_id %>
+  </div>
+  <div class="field">
+    <%= f.label :position_id %><br />
+    <%= f.number_field :position_id %>
+  </div>
+  <div class="field">
+    <%= f.label :remark %><br />
+    <%= f.text_area :remark %>
+  </div>
+  <div class="field">
+    <%= f.label :reply %><br />
+    <%= f.text_area :reply %>
+  </div>
+  <div class="field">
+    <%= f.label :status_id %><br />
+    <%= f.number_field :status_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

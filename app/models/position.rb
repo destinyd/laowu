@@ -4,6 +4,6 @@ class Position < ActiveRecord::Base
 
   belongs_to :department
   has_many  :experiences
-
-  validates :name, :presence => true
+  has_many  :auditions
+  has_many  :offers
 end

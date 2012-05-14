@@ -1,4 +1,12 @@
 Laowu::Application.routes.draw do
+  resources :offers
+
+  resources :applyings
+
+  resources :auditions
+
+  resources :resumes
+
   resources :experiences
 
   resources :jobs

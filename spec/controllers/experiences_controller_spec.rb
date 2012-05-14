@@ -34,6 +34,11 @@ describe ExperiencesController do
     {:salary => 1, :started_at => DateTime.now}
   end
 
+  before (:each) do
+    @user = FactoryGirl.create(:user)
+    sign_in @user
+  end
+
   describe "GET index" do
     it "assigns all experiences as @experiences" do
       experience = Experience.create! valid_attributes

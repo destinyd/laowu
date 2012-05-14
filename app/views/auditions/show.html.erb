@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>At:</b>
+  <%= @audition.at %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%= @audition.user_id %>
+</p>
+
+<p>
+  <b>Company:</b>
+  <%= @audition.company_id %>
+</p>
+
+<p>
+  <b>Position:</b>
+  <%= @audition.position_id %>
+</p>
+
+<p>
+  <b>Remark:</b>
+  <%= @audition.remark %>
+</p>
+
+<p>
+  <b>Reply:</b>
+  <%= @audition.reply %>
+</p>
+
+<p>
+  <b>Status:</b>
+  <%= @audition.status_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_audition_path(@audition) %> |
+<%= link_to 'Back', auditions_path %>

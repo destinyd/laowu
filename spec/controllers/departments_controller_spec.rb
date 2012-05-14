@@ -34,6 +34,11 @@ describe DepartmentsController do
     {:name => 'department name'}
   end
 
+  before (:each) do
+    @company = FactoryGirl.create(:user)
+    sign_in @company
+  end
+
   describe "GET index" do
     it "assigns all departments as @departments" do
       department = Department.create! valid_attributes
@@ -42,13 +47,13 @@ describe DepartmentsController do
     end
   end
 
-  describe "GET show" do
-    it "assigns the requested department as @department" do
-      department = Department.create! valid_attributes
-      get :show, {:id => department.to_param}, valid_session
-      assigns(:department).should eq(department)
-    end
-  end
+  # describe "GET show" do
+  #   it "assigns the requested department as @department" do
+  #     department = Department.create! valid_attributes
+  #     get :show, {:id => department.to_param}, valid_session
+  #     assigns(:department).should eq(department)
+  #   end
+  # end
 
   # describe "GET new" do
   #   it "assigns a new department as @department" do

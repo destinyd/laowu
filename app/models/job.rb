@@ -3,6 +3,7 @@ class Job < ActiveRecord::Base
 
   belongs_to :company
   belongs_to :position
+  has_many  :applyings
 
   validates :finished_at, :presence => true
   validates :name, :presence => true

@@ -1,0 +1,29 @@
+<h1>Listing applyings</h1>
+
+<table>
+  <tr>
+    <th>User</th>
+    <th>Job</th>
+    <th>Resume</th>
+    <th>View at</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @applyings.each do |applying| %>
+  <tr>
+    <td><%= applying.user_id %></td>
+    <td><%= applying.job_id %></td>
+    <td><%= applying.resume_id %></td>
+    <td><%= applying.view_at %></td>
+    <td><%= link_to 'Show', applying %></td>
+    <td><%= link_to 'Edit', edit_applying_path(applying) %></td>
+    <td><%= link_to 'Destroy', applying, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Applying', new_applying_path %>
