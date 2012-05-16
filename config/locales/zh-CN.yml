@@ -181,20 +181,9 @@ zh-CN:
 
   activerecord:
     models:
-      price: "价格"
       user: "用户"
-      comment: "评论"
-      good: "商品"
-      flash: 广告图片
-      article: 文章
-      integral: 积分
-      review: 评价
-      upload: 上传文件
-      attr: 属性
-      outlink: 外链
-      price_good: "商品绑定"
-      shop: 商店
-      brand: 品牌
+      company: "公司"
+
     attributes:
       price:
         price: 单价

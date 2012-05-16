@@ -1,0 +1,11 @@
+zh-CN:
+  devise:
+    invitations:
+      send_instructions: '一封邀请邮件已经发送至%{email}.'
+      invitation_token_invalid: '邀请码无效!'
+      updated: '您到密码设置成功，并成功登录.'
+      no_invitations_remaining: "已经不能再邀请"
+    mailer:
+      invitation_instructions:
+        subject: '邀请信'
+
