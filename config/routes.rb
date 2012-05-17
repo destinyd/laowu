@@ -12,11 +12,17 @@ Laowu::Application.routes.draw do
 
   resources :experiences
 
-  resources :jobs
+  resources :jobs do
+    resources :applyings
+  end
 
-  resources :positions
+  resources :positions do
+    resources :jobs
+  end
 
-  resources :departments
+  resources :departments do
+    resources :positions
+  end
 
   devise_for :companies
 

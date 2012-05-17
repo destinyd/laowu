@@ -1,6 +1,6 @@
 <h1>Listing resumes</h1>
 
-<table>
+<table class='table table-striped'>
   <tr>
     <th>Name</th>
     <th>Is public</th>
@@ -15,9 +15,9 @@
     <td><%= resume.name %></td>
     <td><%= resume.is_public %></td>
     <td><%= resume.user_id %></td>
-    <td><%= link_to 'Show', resume %></td>
-    <td><%= link_to 'Edit', edit_resume_path(resume) %></td>
-    <td><%= link_to 'Destroy', resume, confirm: 'Are you sure?', method: :delete %></td>
+    <td><%= link_to t('labels.show'), resume %></td>
+    <td><%= link_to t('labels.edit'), edit_resume_path(resume) %></td>
+    <td><%= link_to t('labels.destroy'), resume, confirm: t('labels.sure?'), method: :delete %></td>
   </tr>
 <% end %>
 </table>

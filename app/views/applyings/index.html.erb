@@ -1,6 +1,6 @@
 <h1>Listing applyings</h1>
 
-<table>
+<table class='table table-striped'>
   <tr>
     <th>User</th>
     <th>Job</th>
@@ -17,9 +17,9 @@
     <td><%= applying.job_id %></td>
     <td><%= applying.resume_id %></td>
     <td><%= applying.view_at %></td>
-    <td><%= link_to 'Show', applying %></td>
-    <td><%= link_to 'Edit', edit_applying_path(applying) %></td>
-    <td><%= link_to 'Destroy', applying, confirm: 'Are you sure?', method: :delete %></td>
+    <td><%= link_to t('labels.show'), applying %></td>
+    <td><%= link_to t('labels.edit'), edit_applying_path(applying) %></td>
+    <td><%= link_to t('labels.destroy'), applying, confirm: t('labels.sure?'), method: :delete %></td>
   </tr>
 <% end %>
 </table>

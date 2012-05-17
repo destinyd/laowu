@@ -1,6 +1,6 @@
 <h1>Listing auditions</h1>
 
-<table>
+<table class='table table-striped'>
   <tr>
     <th>At</th>
     <th>User</th>
@@ -23,9 +23,9 @@
     <td><%= audition.remark %></td>
     <td><%= audition.reply %></td>
     <td><%= audition.status_id %></td>
-    <td><%= link_to 'Show', audition %></td>
-    <td><%= link_to 'Edit', edit_audition_path(audition) %></td>
-    <td><%= link_to 'Destroy', audition, confirm: 'Are you sure?', method: :delete %></td>
+    <td><%= link_to t('labels.show'), audition %></td>
+    <td><%= link_to t('labels.edit'), edit_audition_path(audition) %></td>
+    <td><%= link_to t('labels.destroy'), audition, confirm: t('labels.sure?'), method: :delete %></td>
   </tr>
 <% end %>
 </table>

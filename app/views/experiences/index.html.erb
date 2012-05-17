@@ -1,6 +1,6 @@
 <h1>Listing experiences</h1>
 
-<table>
+<table class='table table-striped'>
   <tr>
     <th>Salary</th>
     <th>Started at</th>
@@ -21,9 +21,9 @@
     <td><%= experience.user_id %></td>
     <td><%= experience.company_id %></td>
     <td><%= experience.position_id %></td>
-    <td><%= link_to 'Show', experience %></td>
-    <td><%= link_to 'Edit', edit_experience_path(experience) %></td>
-    <td><%= link_to 'Destroy', experience, confirm: 'Are you sure?', method: :delete %></td>
+    <td><%= link_to t('labels.show'), experience %></td>
+    <td><%= link_to t('labels.edit'), edit_experience_path(experience) %></td>
+    <td><%= link_to t('labels.destroy'), experience, confirm: t('labels.sure?'), method: :delete %></td>
   </tr>
 <% end %>
 </table>

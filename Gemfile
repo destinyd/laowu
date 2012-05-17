@@ -39,6 +39,7 @@ gem 'jquery-rails'
 
 # To use debugger
 # gem 'ruby-debug19', :require => 'ruby-debug'
+gem 'debugger'
 
 gem "rspec-rails", ">= 2.9.0.rc2", :group => [:development, :test]
 gem "machinist", :group => :test
@@ -68,7 +69,7 @@ gem "guard-livereload", ">= 0.3.0", :group => :development
 gem "guard-rspec", ">= 0.4.3", :group => :development
 gem "guard-cucumber", ">= 0.6.1", :group => :development
 gem "devise", ">= 2.1.0.rc"
-#gem "devise_invitable", ">= 1.0.1"
+gem "devise_invitable", ">= 1.0.1"
 gem "cancan", ">= 1.6.7"
 gem "rolify", ">= 3.1.0"
 gem "bootstrap-sass", ">= 2.0.1"

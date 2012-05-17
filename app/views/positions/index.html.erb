@@ -1,6 +1,6 @@
-<h1>Listing positions</h1>
+<h1>职位列表</h1>
 
-<table>
+<table class='table table-striped'>
   <tr>
     <th>Name</th>
     <th>Company</th>
@@ -12,16 +12,13 @@
 
 <% @positions.each do |position| %>
   <tr>
-    <td><%= position.name %></td>
-    <td><%= position.company_id %></td>
-    <td><%= position.department_id %></td>
-    <td><%= link_to 'Show', position %></td>
-    <td><%= link_to 'Edit', edit_position_path(position) %></td>
-    <td><%= link_to 'Destroy', position, confirm: 'Are you sure?', method: :delete %></td>
+    <td><%= link_to position,position %></td>
+    <td><%= position.company %></td>
+    <td><%= link_to position.department, position.department %></td>
+    <td><%= link_to t('labels.show'), position %></td>
+    <td><%= link_to t('labels.edit'), edit_position_path(position) %></td>
+    <td><%= link_to t('labels.destroy'), position, confirm: t('labels.sure?'), method: :delete %></td>
   </tr>
 <% end %>
 </table>
-
-<br />
-
-<%= link_to 'New Position', new_position_path %>
+<%= link_to '设立职位', new_position_path %>

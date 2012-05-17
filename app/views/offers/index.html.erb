@@ -1,6 +1,6 @@
 <h1>Listing offers</h1>
 
-<table>
+<table class='table table-striped'>
   <tr>
     <th>Company</th>
     <th>Position</th>
@@ -21,9 +21,9 @@
     <td><%= offer.status_id %></td>
     <td><%= offer.salary %></td>
     <td><%= offer.finished_at %></td>
-    <td><%= link_to 'Show', offer %></td>
-    <td><%= link_to 'Edit', edit_offer_path(offer) %></td>
-    <td><%= link_to 'Destroy', offer, confirm: 'Are you sure?', method: :delete %></td>
+    <td><%= link_to t('labels.show'), offer %></td>
+    <td><%= link_to t('labels.edit'), edit_offer_path(offer) %></td>
+    <td><%= link_to t('labels.destroy'), offer, confirm: t('labels.sure?'), method: :delete %></td>
   </tr>
 <% end %>
 </table>

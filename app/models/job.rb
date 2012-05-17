@@ -1,5 +1,5 @@
 class Job < ActiveRecord::Base
-  attr_accessible :finished_at, :name, :position_id, :salary_max, :salary_min
+  attr_accessible :finished_at, :name, :position_id, :salary_max, :salary_min, :desc
 
   belongs_to :company
   belongs_to :position

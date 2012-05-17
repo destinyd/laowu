@@ -30,6 +30,7 @@
   <%= @job.position_id %>
 </p>
 
+<%= link_to t('labels.edit'), edit_job_path(@job) %> |
+<%= link_to t('labels.back'), jobs_path %>
 
-<%= link_to 'Edit', edit_job_path(@job) %> |
-<%= link_to 'Back', jobs_path %>
+<%= button_to "应聘",job_applyings_path(@job) %>

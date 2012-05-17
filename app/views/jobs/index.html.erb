@@ -21,9 +21,9 @@
     <td><%= job.finished_at %></td>
     <td><%= job.company_id %></td>
     <td><%= job.position_id %></td>
-    <td><%= link_to 'Show', job %></td>
-    <td><%= link_to 'Edit', edit_job_path(job) %></td>
-    <td><%= link_to 'Destroy', job, confirm: 'Are you sure?', method: :delete %></td>
+    <td><%= link_to t('labels.show'), job %></td>
+    <td><%= link_to t('labels.edit'), edit_job_path(job) %></td>
+    <td><%= link_to t('labels.destroy'), job, confirm: t('labels.sure?'), method: :delete %></td>
   </tr>
 <% end %>
 </table>

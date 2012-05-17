@@ -181,13 +181,19 @@ zh-CN:
 
   activerecord:
     models:
-      user: "用户"
-      company: "公司"
+      user: 用户
+      company: 公司
+      resume: 简历
+      experience: 经历
+      position: 职位
+      department: 部门
+      job: 工作
+      offer: 聘书
+      applying: 应聘
 
     attributes:
-      price:
-        price: 单价
-        total: 总价
+      position:
+        department: 部门
 
   attributes:
     created_at: '创建于'
@@ -215,6 +221,13 @@ zh-CN:
     type_id: 类型
     username: 用户名
     password_confirmation: 密码验证
+    department_id: 部门
+    position_id: 职位
+    job_id: 工作
+    salary: 薪资
+    salary_min: 最低薪资
+    salary_max: 最高薪资
+    finished_at: 结束时间
 
 
   labels:
@@ -223,8 +236,9 @@ zh-CN:
     sign_in: 登录
     sign_up: 注册
     forgot?: 忘记密码？
-    sure?: 你确定
+    sure?: 你确定?
     edit: 修改
+    destroy: 删除
     del: 删除
     new: 添加
     give_up: 放弃
