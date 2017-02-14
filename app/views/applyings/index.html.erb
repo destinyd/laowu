@@ -7,8 +7,6 @@
     <th>Resume</th>
     <th>View at</th>
     <th></th>
-    <th></th>
-    <th></th>
   </tr>
 
 <% @applyings.each do |applying| %>
@@ -17,9 +15,10 @@
     <td><%= applying.job_id %></td>
     <td><%= applying.resume_id %></td>
     <td><%= applying.view_at %></td>
-    <td><%= link_to t('labels.show'), applying %></td>
-    <td><%= link_to t('labels.edit'), edit_applying_path(applying) %></td>
-    <td><%= link_to t('labels.destroy'), applying, confirm: t('labels.sure?'), method: :delete %></td>
+    <td>
+      <%= link_to t('labels.show'), applying %>
+      <%= link_to t('labels.destroy'), applying, confirm: t('labels.sure?'), method: :delete %>
+    </td>
   </tr>
 <% end %>
 </table>

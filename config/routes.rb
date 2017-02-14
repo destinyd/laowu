@@ -1,32 +1,40 @@
 Laowu::Application.routes.draw do
-  root  :to => 'home#index'
-  get "home/index"
+  constraints :subdomain => "" do
+    root  :to => 'home#index'
+    get "home/index"
 
-  resources :offers
+    resources :offers
 
-  resources :applyings
+    resources :auditions
 
-  resources :auditions
+    resources :resumes
 
-  resources :resumes
+    resources :experiences
 
-  resources :experiences
+    resources :jobs do
+      resources :applyings,:only => [:create]
+    end
 
-  resources :jobs do
-    resources :applyings
-  end
+    resources :positions do
+      resources :jobs
+    end
 
-  resources :positions do
-    resources :jobs
-  end
+    resources :departments do
+      resources :positions
+    end
 
-  resources :departments do
-    resources :positions
   end
 
   devise_for :companies
 
   devise_for :users
+
+  constraints :subdomain => "self" do
+    resources :applyings,:except => [:edit,:update,:new,:create]#, :module => 'user'
+  end
+  constraints :subdomain => "company" do
+    resources :applyings,:except => [:edit,:update,:destroy,:new,:create]#, :module => 'user'
+  end
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

@@ -5,4 +5,7 @@ class Applying < ActiveRecord::Base
   belongs_to :user
   validates :user_id, presence: true, uniqueness: {scope: :job_id}
   validates :job_id, presence: true, uniqueness: {scope: :user_id}
+  def view
+    update_attribute(:view_at, DateTime.now) unless view_at
+  end
 end
